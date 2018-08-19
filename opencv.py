@@ -19,7 +19,7 @@ model = cv2.dnn.readNetFromCaffe(args["protext"], args["model"])
 
 # read the image and get the dimensions
 image = cv2.imread(args["image"])
-(h,w) = image.shape[:2]
+(h,w) = image.shape[:2] 
 
 # do preprocessing - image -> blob
 processed_image = cv2.dnn.blobFromImage(cv2.resize(image, (300,300)), 1.0, (300,300), (104.0, 177.0, 123.0))
